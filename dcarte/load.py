@@ -42,7 +42,7 @@ def load(dataset:str,domain:str,**kwargs)->pd.DataFrame:
         until (str): The date to load the data to. The format should be ```'[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]'``` or ``'[YYYY]-[MM]-[DD]```. If the date given is sooner than the data downloaded, the data will not update unless ```update=True```. Defaults to the current date and time.
         update (bool): Whether to update the data when loading, by downloading the recent data from the server and re-running the script that produces the given domain. Defaults to ```False```.
         reload (bool): Whether to re-download all data from the server and to re-run the script that feeds and produces this dataset. Defaults to ```False```.
-        reapply (bool): Whether to re-run the script that produces this dataset. Defaults to ```False```.
+        reapply (bool): Whether to re-run the function that produces this dataset. This will not re-run the functions that produce the datasets that feed this one. Defaults to ```False```.
 
 
     Raises:
